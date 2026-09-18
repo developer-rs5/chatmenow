@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Connect</title>
+
+    <link rel="icon" type="image/jpeg" href="https://cdn.discordapp.com/attachments/1371739938256715837/1536797992651325560/WhatsApp_Image_2026-08-10_at_23.35.25.jpeg?ex=6aab8369&is=6aaa31e9&hm=165a26d078d3e153f2fff0920643cf253f4dfae79db3eb6abc6c7596c45ce2ec">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WhatsApp Connect">
+    <meta property="og:description" content="Connect on WhatsApp now.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1371739938256715837/1536797992651325560/WhatsApp_Image_2026-08-10_at_23.35.25.jpeg?ex=6aab8369&is=6aaa31e9&hm=165a26d078d3e153f2fff0920643cf253f4dfae79db3eb6abc6c7596c45ce2ec">
+    <meta property="og:image:alt" content="WhatsApp Connect">
+    <meta property="og:url" content="https://github.com/developer-rs5/chatmenow">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WhatsApp Connect">
+    <meta name="twitter:description" content="Connect on WhatsApp now.">
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1371739938256715837/1536797992651325560/WhatsApp_Image_2026-08-10_at_23.35.25.jpeg?ex=6aab8369&is=6aaa31e9&hm=165a26d078d3e153f2fff0920643cf253f4dfae79db3eb6abc6c7596c45ce2ec">
 
     <style>
         * {
@@ -185,7 +198,7 @@
         <div class="card">
 
             <div class="avatar">
-                <img src="https://cdn.discordapp.com/attachments/1371739938256715837/1536797992651325560/WhatsApp_Image_2026-08-10_at_23.35.25.jpeg?ex=6aab8369&is=6aaa31e9&hm=165a26d078d3e153f2fff0920643cf253f4dfae79db3eb6abc6c7596c45ce2ec" alt="avatar">
+                <img src="https://cdn.discordapp.com/attachments/1371739938256715837/1536797992651325560/WhatsApp_Image_2026-08-10_at_23.35.25.jpeg?ex=6aab8369&is=6aaa31e9&hm=165a26d078d3e153f2fff0920643cf253f4dfae79db3eb6abc6c7596c45ce2ec" alt="WhatsApp profile">
             </div>
 
             <p class="online">
@@ -209,7 +222,7 @@
                 target="_blank"
                 rel="noopener"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                         fill="none"
                         stroke="#fff"
@@ -218,7 +231,7 @@
                     />
                     <path
                         fill="#fff"
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.15-.198.297-.768.967-.94 1.165-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.297-.495.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.15-.198.297-.768.967-.94 1.165-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.312-2.078-2.608-.207-.45.2-.393.574-1.286.063-.198.032-.297-.016-.446-.05-.149-.672-1.62-.922-2.219-.242-.583-.487-.504-.672-.513l-.573-.01c-.198 0-.52.075-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"
                     />
                 </svg>
 
@@ -231,10 +244,6 @@
     <script>
         const API = 'https://chut-bakent.zenuxs.site';
 
-        /*
-         * Background status check
-         * Does NOT block, hide, or modify the page.
-         */
         fetch(`${API}/status`, {
             method: 'GET',
             cache: 'no-store'
@@ -250,13 +259,7 @@
             console.error('/status error:', error);
         });
 
-
-        /*
-         * Track WhatsApp button click
-         * Does NOT prevent the normal link redirect.
-         */
         document.getElementById('whatsappBtn').addEventListener('click', () => {
-
             fetch(`${API}/clicked`, {
                 method: 'GET',
                 cache: 'no-store',
@@ -268,17 +271,15 @@
             .catch(error => {
                 console.error('/clicked error:', error);
             });
-
         });
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP1MY807XJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP1MY807XJ');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LP1MY807XJ');
+    </script>
 
 </body>
 </html>
